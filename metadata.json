@@ -1,0 +1,8 @@
+{
+  "name": "ClipPulse — Multi-Stream AI Auto-Clipper",
+  "description": "Monitor multiple live streams and video feeds concurrently, detect viral moments with Gemini AI, render 9:16 vertical Shorts via FFmpeg, and publish directly to YouTube.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

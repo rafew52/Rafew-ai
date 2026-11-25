@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#090B10" />
+    <title>Rafew X GTA VI Clip AI — Live Stream Auto-Clipper</title>
+    <meta
+      name="description"
+      content="Monitor authorized live streams continuously, detect epic gameplay and viral moments with AI, render 9:16 Shorts with captions via FFmpeg, and download for manual YouTube upload."
+    />
+    <meta property="og:title" content="Rafew X GTA VI Clip AI" />
+    <meta
+      property="og:description"
+      content="Mobile-friendly AI live stream clipper creating 9:16 vertical Shorts with subtitles, titles, descriptions, hashtags, and tags."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <script>
+      (function () {
+        var booted = false;
+        window.__CLIPS_AI_MARK_MOUNTED__ = function () {
+          booted = true;
+        };
+        function showBootFallback(reason) {
+          if (booted) return;
+          var root = document.getElementById('root');
+          if (!root) return;
+          root.innerHTML =
+            '<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:#090B10;color:#f1f5f9;padding:24px;font-family:system-ui,-apple-system,sans-serif;">' +
+            '<div style="max-width:520px;width:100%;background:#11151F;border:1px solid rgba(153,27,27,0.7);border-radius:16px;padding:24px;">' +
+            '<h1 style="margin:0;font-size:18px;font-weight:700;color:#fca5a5;">Preview Startup Interrupted</h1>' +
+            '<p style="margin:10px 0 0;font-size:13px;line-height:1.5;color:#cbd5e1;">' +
+            String(reason || 'Failed to initialize client application scripts.').replace(/</g, '&lt;') +
+            '</p>' +
+            '<div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;">' +
+            '<button type="button" onclick="window.location.reload()" style="min-height:42px;padding:0 16px;border:0;border-radius:10px;background:#ea580c;color:#fff;font-size:13px;font-weight:600;cursor:pointer;">Reload Preview</button>' +
+            '</div></div></div>';
+        }
+        window.addEventListener('error', function (ev) {
+          if (!booted && ev && ev.message) {
+            showBootFallback(ev.message);
+          }
+        });
+        window.addEventListener('unhandledrejection', function (ev) {
+          if (!booted) {
+            var msg = ev && ev.reason ? (ev.reason.message || String(ev.reason)) : 'Unhandled module startup error.';
+            showBootFallback(msg);
+          }
+        });
+      })();
+    </script>
+  </head>
+  <body class="bg-[#090B10] text-slate-100 antialiased selection:bg-orange-500/30 selection:text-orange-100">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
